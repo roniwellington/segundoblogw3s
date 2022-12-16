@@ -612,6 +612,12 @@ body.nav-active{
     display: none;
 }
 
+.feature-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
 .feature-card{
     padding: 20px;
     border-radius: var(--radius-16);
@@ -621,39 +627,31 @@ body.nav-active{
 .feature-card:is(:hover, :focus-within){
     transform: translateY(-5px);
 }
-
 .feature-card .card-banner {
     border-radius: var(--radius-16);
 }
-
 .feature-card .card-wrapper{
     margin-block-start: 24px;
 }
-
 .feature .profile-card :is(.card-title, .card-subtitle){
     color: var(--text-slate-gray);
 }
-
 .feature .profile-card .card-title {
     font-weight: var(--weight-bold);
 }
-
 .feature .profile-card, .card-subtitle,
 .feature .card-wrapper .card-btn{
     font-size: var(--fontSize-6);
 }
-
 .feature-card .card-wrapper:last-child{
     font-size: var(--fontSize-4);
     margin-block-end: 0;
 }
-
 .feature .card-wrapper .card-btn {
     position: relative;
     color: var(--text-wild-blue-yonder);
     z-index: 1;
 }
-
 .feature .card-wrapper .card-btn::before{
     content: "";
     position: absolute;
@@ -665,7 +663,6 @@ body.nav-active{
     border-radius: var(--radius-circle);
     z-index: -1;
 }
-
 .feature .btn {
     margin-inline: auto;
     margin-block-start: 30px;
@@ -674,3 +671,102 @@ body.nav-active{
 /*==================
     #POPULAR TAGS
 =================} */
+.tags .grid-list{
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+}
+
+.tag-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 18px;
+    border-radius: var(--radius-16);
+}
+.tag-btn:is(:hover, :focus-visible){
+    box-shadow: var(--shadow-2);
+    background-image: linear-gradient(var(--bg-oxford-blue), var(--bg-oxford-blue)), var(--gradient-1);
+    background-clip: padding-box, border-box;
+    border-color: transparent;
+    transform: translateY(-2px);
+    transition: var(--transition-1);
+}
+.tag-btn img{
+    width: 100%;
+    max-width: 32px;
+}
+
+/*======================
+    #RECENT POST
+======================*/
+.recent-post .container {
+    display: grid;
+    gap: 50px;
+}
+.recent-post-card{
+    display: grid;
+    gap: 30px;
+}
+.recent-post-card .card-banner{
+    border-radius: var(--radius-16);
+    transition: var(--transition-1);
+}
+.recent-post-card:is(:hover,:focus-within).card-banner {
+    transform: translateY(-2px);
+}
+
+.recent-post-card .card-text {
+    color: var(--text-wild-blue-yonder);
+    font-size: var(--fontSize-6);
+    line-height: var(--lineHeight-1);
+}
+.recent-post-card .card-badge {
+    background-color: var(--bg-prussian-blue);
+    max-width: max-content;
+    color: var(--text-white);
+    font-size: var(--fontSize-8);
+    font-weight: var(--weight-bold);
+    padding: 4px 15px;
+    border-radius: var(--radius-pill);
+    transition: var(--transition-1);
+}
+.recent-post-card .card-badge:is(:hover, :focus-visible),
+.pagination-btn:is(:hover, :focus-visible){
+    transform: translateY(-2px);
+    background-color: var(--bg-carolina-blue);
+} 
+.recent-post-card .card-title {
+    margin-block: 15px 20px;
+}
+.recent-post-card .card-tag{
+    gap: 15px;
+    color: var(--text-slate-gray);
+}
+
+.recent-post-card .card-wrapper ion-icon {
+    font-size: 1.8rem;
+    --ionicon-stroke-width: 40px
+}
+.pagination-btn{
+    background-color: var(--bg-prussian-blue);
+    color: var(--text-white);
+    font-weight: var(--weight-bold);
+    line-height: 1;
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-circle);
+    transition: var(--transition-1);
+}
+.pagination-btn:is(:hover, :focus-visible){
+    background-color: var(--bg-carolina-blue);
+    transform: translateY(-2px);
+}
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    margin-block-start: 60px;
+}
