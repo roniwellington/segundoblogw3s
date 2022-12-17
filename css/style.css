@@ -1,7 +1,7 @@
 /*BACKGROUND COLORS*/
 :root {
     --bg-wild-blue-yonder: hsla(216, 33%, 68%, 1);
-    --bg-carolina-blue: hsla(199, 89%, 49%, 1);
+    --bg-carolina-blue: rgb(237, 99, 13);
     --bg-prussian-blue: hsla(216, 33%, 20%, 1);
     --bg-oxford-blue: hsla(222, 44%, 13%, 1);
     --bg-oxford-blue-2: rgb(0, 0, 0);
@@ -16,8 +16,8 @@
     --text-slate-gray: hsla(217, 17%, 48%, 1);
 
     /** Gradient colors */
-    --gradient-1: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%);
-    --gradient-2: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%, #0ea5ea);
+    --gradient-1: linear-gradient(90deg, #7c2c19, #b5532f 51%);
+    --gradient-2: linear-gradient(90deg, #7c2c19, #b5532f 51%, #c9774c);
     --gradient-3: linear-gradient(0deg, #000d1a, transparent);
 
     /** Border colors */
@@ -59,7 +59,7 @@
 
     /*BOX SHADOW*/
     --shadow-1: 0 8px 20px 0 hsla(0, 0%, 0%, 0.05);
-    --shadow-2: 0px 3px 20px hsla(180, 90%, 43%, 0.2);
+    --shadow-2: 0px 3px 20px hsla(23, 90%, 49%, 1);
 
     /*BORDER RADIUS*/
     --radius-6: 6px;
@@ -473,6 +473,7 @@ body.nav-active {
 
 .hero .hero-text {
     margin-block-end: 40px;
+    color: var(--white);
 }
 
 .hero .input-wrapper {
